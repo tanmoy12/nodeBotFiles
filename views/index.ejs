@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quijinn</title>
+</head>
+<body>
+Orders delicious foods
+<br>
+
+<form action="/restaurants" method="POST">
+    <input type="text" placeholder="Restaurant Name" name="name">
+    <input type="text" placeholder="Location" name="location">
+    <input type="number" placeholder="Zip Code" name="zip_code">
+    <button type="submit">Submit</button>
+</form>
+
+<br>
+
+<ul class="restaurants">
+    <% for(var i=0; i<restaurants.length; i++) {%>
+    <li class="quote">
+        <span><%= restaurants[i].name %></span>
+        <span><%= restaurants[i].location %></span>
+        <span><%= restaurants[i].zip_code %></span>
+    </li>
+    <% } %>
+</ul>
+
+</body>
+</html>
